@@ -3,11 +3,11 @@ const express = require("express"); // creating application
 const app = express(); // calling
 var name = "Sathvik";
 
-app.use(express.static("Frontend"));  //telling our app to use static files 
+app.use(express.static("frontend"));  //telling our app to use static files 
 
 
 app.get("/",function(req,res){
-    res.sendFile(__dirname + "/Frontend/index.html")
+    res.sendFile(__dirname + "/frontend/index.html")
 
 })  
 
