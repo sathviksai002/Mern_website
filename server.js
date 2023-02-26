@@ -3,6 +3,7 @@ dotenv.config();
 const mongoose = require("mongoose");
 const express = require("express"); // creating application
 const app = express(); // calling
+const courseLib = require('./backend/lib/courseLib');
 
 mongoose.set('strictQuery', true);
 
@@ -15,11 +16,13 @@ app.get("/",function(req,res){
 })  
 
 
-mongoose.connect(process.env.MONGO_CONNECTION_STRING,function(err){
+mongoose.connect(process.env.MONGO_CONNECTION_STRING,async function(err){
     if(err){
         console.error(err);}
     else{
         console.log("DB Connection successful");
+        await courseLib.createFirstCourse();
+        console.log(await courseLib.getAllCourses());
         app.listen(3000,function(){
             console.log("Server running on http://localhost:3000");
         })
