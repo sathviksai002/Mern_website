@@ -7,7 +7,7 @@ app.use(express.static("frontend"));  //telling our app to use static files
 
 
 app.get("/",function(req,res){
-    res.sendFile(__dirname + "/frontend/index.html")
+    res.sendFile(__dirname + "frontend/index.html")
 
 })  
 
