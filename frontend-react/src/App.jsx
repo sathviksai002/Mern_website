@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Button from "react-bootstrap/Button";
 
 function App() {
 
@@ -10,12 +11,22 @@ function App() {
     <div className="App">
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Navbar.Brand href="#home">Neetode Clone</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="/courses">Courses</Nav.Link>
+            <Nav.Link href="/practice">Practice</Nav.Link>
+            <Nav.Link href="/roadmap">Roadmap</Nav.Link>
+            <Nav.Link href="/pro">Pro</Nav.Link>
+
           </Nav>
+          <div>
+              <Button variant="outline-primary">
+                 dark
+              </Button>
+              <Button variant="primary">
+                 Sign In
+              </Button>
+          </div>
         </Container>
       </Navbar>
     </div>
